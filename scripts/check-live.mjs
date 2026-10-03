@@ -1,0 +1,11 @@
+import { chromium } from "playwright";
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+const errors = [];
+page.on("pageerror", (e) => errors.push(e.message));
+page.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); });
+await page.goto("https://sumanrathore-88.github.io/multi-agent/", { waitUntil: "networkidle", timeout: 30000 });
+await page.waitForTimeout(1200);
+await page.screenshot({ path: ".impeccable/review/live-site.png" });
+console.log("errors:", JSON.stringify(errors));
+await browser.close();
