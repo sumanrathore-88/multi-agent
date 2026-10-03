@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #090b10;
+  --bg-elevated: #10131b;
+  --bg-sunken: #060709;
+  --surface-glass: rgba(255, 255, 255, 0.045);
+  --surface-glass-strong: rgba(255, 255, 255, 0.07);
+  --border-hairline: rgba(255, 255, 255, 0.08);
+  --border-hairline-strong: rgba(255, 255, 255, 0.14);
+
+  --text-primary: #eef1f7;
+  --text-secondary: #9aa3b5;
+  --text-tertiary: #838ba1;
+
+  --accent-blue: #4c86ff;
+  --accent-blue-dim: #2c4d94;
+  --accent-cyan: #2fd9e8;
+  --accent-cyan-dim: #1c7e87;
+  --accent-violet: #8f6bff;
+  --accent-violet-dim: #4f3b94;
+  --accent-amber: #e0a23a;
+  --accent-rose: #e8617a;
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono-data);
+
+  --shadow-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -8px rgba(0, 0, 0, 0.5);
+  --shadow-elevation-2: 0 2px 4px rgba(0, 0, 0, 0.45), 0 16px 40px -12px rgba(0, 0, 0, 0.6);
+  --shadow-elevation-3: 0 4px 8px rgba(0, 0, 0, 0.5), 0 28px 64px -16px rgba(0, 0, 0, 0.65);
+  --shadow-glow-blue: 0 0 0 1px rgba(76, 134, 255, 0.25), 0 12px 32px -8px rgba(76, 134, 255, 0.35);
+  --shadow-glow-cyan: 0 0 0 1px rgba(47, 217, 232, 0.25), 0 12px 32px -8px rgba(47, 217, 232, 0.3);
+  --shadow-glow-violet: 0 0 0 1px rgba(143, 107, 255, 0.25), 0 12px 32px -8px rgba(143, 107, 255, 0.35);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-sunken: var(--bg-sunken);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-blue-dim: var(--accent-blue-dim);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-accent-cyan-dim: var(--accent-cyan-dim);
+  --color-accent-violet: var(--accent-violet);
+  --color-accent-violet-dim: var(--accent-violet-dim);
+  --color-accent-amber: var(--accent-amber);
+  --color-accent-rose: var(--accent-rose);
+  --color-border-hairline: var(--border-hairline);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  border-color: var(--border-hairline);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: radial-gradient(ellipse 120% 80% at 50% -10%, rgba(76, 134, 255, 0.07), transparent 60%),
+    var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(76, 134, 255, 0.35);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  border: 2px solid transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tabular {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-feature-settings: "tnum" 1, "zero" 1;
+  letter-spacing: -0.01em;
+}
+
+.glass {
+  background: var(--surface-glass);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid var(--border-hairline);
+}
+
+.glass-strong {
+  background: var(--surface-glass-strong);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  border: 1px solid var(--border-hairline-strong);
+}
+
+/* Floating overlays (dropdowns, popovers) must fully occlude page content
+   behind them. backdrop-filter is a nice-to-have, not reliable enough on its
+   own (unsupported, GPU-less, or "reduce transparency" contexts render it as
+   a no-op against a near-transparent background), so these carry a
+   near-opaque base fill as the real occlusion mechanism. */
+.popover-surface {
+  background: rgba(13, 16, 23, 0.97);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid var(--border-hairline-strong);
+}
+
+.perspective-grid {
+  perspective: 2200px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

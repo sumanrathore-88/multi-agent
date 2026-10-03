@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-03T06:57:26.961Z",
+  "title": "Design System: Indixpert Pipeline Dashboard",
+  "extensions": {
+    "colorMeta": {
+      "bg": { "role": "neutral", "displayName": "Void Ground", "canonical": "#090b10", "tonalRamp": ["#040508", "#060709", "#090b10", "#10131b", "#1a1f2c", "#2a3042", "#444c63", "#7a8296"] },
+      "bg-elevated": { "role": "neutral", "displayName": "Elevated Charcoal", "canonical": "#10131b", "tonalRamp": ["#060709", "#090b10", "#10131b", "#181d29", "#242b3b", "#3a4254", "#5c6579", "#9aa3b5"] },
+      "bg-sunken": { "role": "neutral", "displayName": "Sunken Well", "canonical": "#060709", "tonalRamp": ["#020203", "#040506", "#060709", "#0c0e12", "#15171d", "#232631", "#3c404e", "#6e7383"] },
+      "text-primary": { "role": "neutral", "displayName": "Primary Text", "canonical": "#eef1f7", "tonalRamp": ["#1a1d24", "#3a3f4c", "#5c6373", "#7e869a", "#a0a8b8", "#c2c8d4", "#dadfe8", "#eef1f7"] },
+      "text-secondary": { "role": "neutral", "displayName": "Secondary Text", "canonical": "#9aa3b5", "tonalRamp": ["#14161b", "#2a2e38", "#454b58", "#616878", "#7d8495", "#9aa3b5", "#b8bfcc", "#d6dbe3"] },
+      "text-tertiary": { "role": "neutral", "displayName": "Tertiary Text", "canonical": "#838ba1", "tonalRamp": ["#121419", "#282c35", "#424753", "#5c6271", "#717893", "#838ba1", "#a3aabd", "#c3c9d6"] },
+      "accent-blue": { "role": "primary", "displayName": "Electric Blue", "canonical": "#4c86ff", "tonalRamp": ["#0d2050", "#163a7f", "#2252ac", "#2c4d94", "#3a6cd6", "#4c86ff", "#7ba6ff", "#b3cbff"] },
+      "accent-cyan": { "role": "secondary", "displayName": "Signal Cyan", "canonical": "#2fd9e8", "tonalRamp": ["#0a3a40", "#114f57", "#1c7e87", "#1b969f", "#22b9c5", "#2fd9e8", "#6fe6ee", "#aef1f5"] },
+      "accent-violet": { "role": "secondary", "displayName": "Forecast Violet", "canonical": "#8f6bff", "tonalRamp": ["#241a52", "#352780", "#4f3b94", "#5c45b8", "#7557e0", "#8f6bff", "#b29dff", "#d4c7ff"] },
+      "accent-amber": { "role": "signal", "displayName": "Risk Amber", "canonical": "#e0a23a", "tonalRamp": ["#3c2a0c", "#5e4113", "#8a5f1c", "#b67d26", "#cc8f2e", "#e0a23a", "#edc06f", "#f6dea9"] },
+      "accent-rose": { "role": "signal", "displayName": "Error Rose", "canonical": "#e8617a", "tonalRamp": ["#421621", "#671f30", "#9a2e47", "#c43c5c", "#dd4e69", "#e8617a", "#f0909f", "#f7c1c8"] },
+      "border-hairline": { "role": "neutral", "displayName": "Hairline Border", "canonical": "rgba(255,255,255,0.08)" },
+      "border-hairline-strong": { "role": "neutral", "displayName": "Strong Hairline Border", "canonical": "rgba(255,255,255,0.14)" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page title only (\"Pipeline Overview\")." },
+      "title": { "displayName": "Title", "purpose": "Panel and section headings." },
+      "body": { "displayName": "Body", "purpose": "Table cells, descriptions, menu items." },
+      "label": { "displayName": "Label", "purpose": "Column headers, stage badges, captions." },
+      "data": { "displayName": "Data (Tabular)", "purpose": "Every KPI, currency value, percentage, count, and date; monospaced with tnum/zero features." }
+    },
+    "shadows": [
+      { "name": "elevation-1", "value": "0 1px 2px rgba(0,0,0,0.4), 0 8px 24px -8px rgba(0,0,0,0.5)", "purpose": "Default resting card/panel." },
+      { "name": "elevation-2", "value": "0 2px 4px rgba(0,0,0,0.45), 0 16px 40px -12px rgba(0,0,0,0.6)", "purpose": "Section panels, open popovers/dropdowns." },
+      { "name": "elevation-3", "value": "0 4px 8px rgba(0,0,0,0.5), 0 28px 64px -16px rgba(0,0,0,0.65)", "purpose": "The deal detail drawer, the highest stacking surface." },
+      { "name": "glow-blue", "value": "0 0 0 1px rgba(76,134,255,0.25), 0 12px 32px -8px rgba(76,134,255,0.35)", "purpose": "State-driven accent emphasis on active/hovered blue elements." },
+      { "name": "glow-cyan", "value": "0 0 0 1px rgba(47,217,232,0.25), 0 12px 32px -8px rgba(47,217,232,0.3)", "purpose": "State-driven accent emphasis on active/hovered cyan elements." },
+      { "name": "glow-violet", "value": "0 0 0 1px rgba(143,107,255,0.25), 0 12px 32px -8px rgba(143,107,255,0.35)", "purpose": "State-driven accent emphasis on active/hovered violet elements." }
+    ],
+    "motion": [
+      { "name": "funnel-transform", "value": "transition: transform, filter, box-shadow 300ms", "purpose": "Funnel card depth/brightness response on hover/select." },
+      { "name": "drawer-slide", "value": "cubic-bezier(0.16, 1, 0.3, 1) 320ms", "purpose": "Deal detail drawer slide-in/out." },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion: reduce collapses all animation/transition durations to 0.001ms", "purpose": "Accessibility fallback, global." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (tinted)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Low-opacity accent-tinted action button, e.g. \"Clear all filters\" / \"Try again\".",
+      "html": "<button class=\"ds-btn-primary\">Clear all filters</button>",
+      "css": ".ds-btn-primary { background: rgba(76,134,255,0.16); color: #4c86ff; border: none; border-radius: 8px; padding: 6px 12px; font-size: 12px; font-weight: 500; font-family: Inter, ui-sans-serif, system-ui, sans-serif; transition: background 0.2s; } .ds-btn-primary:hover { background: rgba(76,134,255,0.24); } .ds-btn-primary:focus-visible { outline: 2px solid #4c86ff; outline-offset: 2px; border-radius: 2px; }"
+    },
+    {
+      "name": "Dropdown",
+      "kind": "input",
+      "refersTo": "dropdown-trigger",
+      "description": "Filter/range select trigger with popover listbox.",
+      "html": "<div class=\"ds-dropdown\"><button class=\"ds-dropdown-trigger\" aria-haspopup=\"listbox\">Range: This Year</button></div>",
+      "css": ".ds-dropdown { position: relative; min-width: 150px; font-family: Inter, ui-sans-serif, system-ui, sans-serif; } .ds-dropdown-trigger { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 8px; background: rgba(255,255,255,0.045); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 8px 12px; color: #9aa3b5; font-size: 12px; font-weight: 500; } .ds-dropdown-trigger:hover, .ds-dropdown-trigger:focus-visible { background: rgba(255,255,255,0.07); }"
+    },
+    {
+      "name": "Stage Pill",
+      "kind": "chip",
+      "refersTo": "pill",
+      "description": "Fixed-value stage/status tag, accent-tinted by pipeline stage.",
+      "html": "<span class=\"ds-pill\"><span class=\"ds-pill-dot\"></span>Negotiation</span>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; gap: 6px; border-radius: 9999px; padding: 4px 10px; font-size: 12px; font-weight: 500; white-space: nowrap; background: rgba(143,107,255,0.16); color: #c3b2ff; font-family: Inter, ui-sans-serif, system-ui, sans-serif; } .ds-pill-dot { width: 6px; height: 6px; border-radius: 9999px; background: #8f6bff; }"
+    },
+    {
+      "name": "Glass Card",
+      "kind": "card",
+      "refersTo": "card-glass",
+      "description": "Standard in-flow panel (KPI card, insight card, section panel).",
+      "html": "<div class=\"ds-card\"><p class=\"ds-card-label\">Win Rate</p><p class=\"ds-card-value\">42%</p></div>",
+      "css": ".ds-card { background: rgba(255,255,255,0.045); backdrop-filter: blur(20px) saturate(140%); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px -8px rgba(0,0,0,0.5); font-family: Inter, ui-sans-serif, system-ui, sans-serif; } .ds-card-label { font-size: 12px; color: #838ba1; margin: 0 0 8px; } .ds-card-value { font-family: 'JetBrains Mono', ui-monospace, monospace; font-feature-settings: 'tnum' 1, 'zero' 1; letter-spacing: -0.01em; font-size: 24px; font-weight: 600; color: #eef1f7; margin: 0; }"
+    },
+    {
+      "name": "Popover Overlay",
+      "kind": "custom",
+      "refersTo": "popover-panel",
+      "description": "Near-opaque overlay surface used for dropdown menus, notifications, profile menu, and the deal drawer; opacity (not blur alone) is the occlusion mechanism.",
+      "html": "<div class=\"ds-popover\" role=\"dialog\"><p class=\"ds-popover-title\">Notifications</p></div>",
+      "css": ".ds-popover { background: rgba(13,16,23,0.97); backdrop-filter: blur(20px) saturate(140%); border: 1px solid rgba(255,255,255,0.14); border-radius: 16px; padding: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.45), 0 16px 40px -12px rgba(0,0,0,0.6); font-family: Inter, ui-sans-serif, system-ui, sans-serif; } .ds-popover-title { font-size: 14px; font-weight: 500; color: #eef1f7; margin: 0; padding: 6px 8px; }"
+    },
+    {
+      "name": "Pipeline Funnel Stage Card",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Signature component: one of five stage cards in the 3D-receding pipeline funnel, with real depth at rest via perspective/rotateX/translateZ/brightness falloff.",
+      "html": "<div class=\"ds-funnel\"><button class=\"ds-funnel-card\" style=\"transform: translateZ(-46px) translateY(7px) scale(0.972); filter: brightness(0.965);\"><span class=\"ds-funnel-stage\">Qualified</span><span class=\"ds-funnel-value\">$2.4M</span></button></div>",
+      "css": ".ds-funnel { perspective: 2200px; } .ds-funnel-card { display: flex; flex-direction: column; justify-content: space-between; gap: 12px; min-height: 168px; padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.045); border: 1px solid rgba(255,255,255,0.08); transition: transform 300ms, filter 300ms, box-shadow 300ms; box-shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px -8px rgba(0,0,0,0.5); font-family: Inter, ui-sans-serif, system-ui, sans-serif; } .ds-funnel-card:hover { transform: translateZ(32px) scale(1.02); filter: brightness(1); box-shadow: 0 0 0 1px rgba(76,134,255,0.25), 0 12px 32px -8px rgba(76,134,255,0.35); } .ds-funnel-stage { font-size: 14px; font-weight: 600; color: #eef1f7; } .ds-funnel-value { font-family: 'JetBrains Mono', ui-monospace, monospace; font-feature-settings: 'tnum' 1, 'zero' 1; font-size: 20px; font-weight: 600; color: #eef1f7; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Architectural Command Deck",
+    "overview": "Indixpert reads as a physically-layered instrument panel, not a card grid skinned dark. The ground is a near-black charcoal-navy that recedes, and everything that matters floats above it on hairline-bordered glass at a distinct, legible depth. Three accent roles — electric blue, cyan, violet — are assigned by meaning (primary data/action, positive/growth, forecast/predictive) and never mixed decoratively; amber and rose exist only as risk/alert signals, outside the three-role discipline. Depth is real: the pipeline funnel uses CSS 3D perspective, per-card translateZ/translateY/scale/brightness falloff, so the stacking is perceptible at rest, not just revealed on hover. Numbers are always tabular (JetBrains Mono, tnum/zero features) so columns of currency and percentages align. Labels and prose stay in Inter, a crisp grotesk. The system rejects the flat single-plane card-grid every SaaS dashboard defaults to, and rejects decorative glow or gradient as a substitute for genuine elevation.",
+    "keyCharacteristics": [
+      "Charcoal-navy ground with glass panels at disciplined elevation steps, not a flat dark theme.",
+      "Three accent roles (blue/cyan/violet) assigned by data meaning; amber/rose reserved for risk and error only.",
+      "Real CSS 3D perspective and per-layer transform falloff on the pipeline funnel, visible at rest.",
+      "Tabular, monospaced figures everywhere a number appears.",
+      "Floating overlays (dropdowns, popovers, the deal drawer) use a near-opaque .popover-surface fill, never thin glass, so they reliably occlude content behind them."
+    ],
+    "rules": [
+      { "name": "The Three-Role Rule", "body": "Blue, cyan, and violet are each tied to one data meaning (action/primary, growth/positive, forecast/predictive) and are never swapped or mixed decoratively on the same element. Amber and rose are reserved for risk and error signaling and never used as a fourth decorative accent.", "section": "colors" },
+      { "name": "The Opaque Overlay Rule", "body": "Any floating surface that must occlude content behind it (dropdown menus, the notifications/profile popovers, the deal drawer) uses the near-opaque .popover-surface fill (rgba(13,16,23,0.97) + blur), not the thin .glass/.glass-strong surfaces used for in-flow panels. Backdrop blur alone is a nice-to-have, never the occlusion mechanism.", "section": "colors" },
+      { "name": "The Tabular Everywhere Rule", "body": "Any numeral representing money, a percentage, a count, or a date in a data context renders in .tabular (JetBrains Mono, tnum/zero). Prose and labels stay in Inter; the two faces are never interchanged.", "section": "typography" },
+      { "name": "The Depth-at-Rest Rule", "body": "The funnel's 3D layering (perspective, rotateX, per-card translateZ/scale/brightness) must be visible on first paint, not conjured only by hover. Hover/active states push a card forward (translateZ(32px)); they do not create depth that didn't already exist.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do assign each of blue/cyan/violet to exactly one data meaning (primary/action, growth/positive, forecast/predictive) and keep that mapping consistent across KPIs, stage colors, and chart lines.",
+      "Do render every data numeral — currency, percentage, count, date — in the .tabular monospaced class.",
+      "Do use .popover-surface's near-opaque fill for any overlay that must occlude content behind it (dropdowns, popovers, the drawer); treat backdrop-filter as supplementary, not load-bearing.",
+      "Do make the funnel's 3D depth (perspective + rotateX + per-card translateZ/scale/brightness) visible at rest, with hover/selection only pushing a card further forward.",
+      "Do disclose scope and provenance in plain text near the data it affects (e.g. the \"sample data for demonstration\" note, \"YTD quota attainment\" label) rather than letting a chart's real scope stay implicit."
+    ],
+    "donts": [
+      "Don't mix the three accent hues decoratively on the same element, or introduce a fourth decorative accent; amber and rose stay reserved for risk/error signaling.",
+      "Don't use thin .glass/.glass-strong surfaces for anything that must reliably hide content behind it — that's what caused the earlier stacking/occlusion bug this system now guards against via .popover-surface.",
+      "Don't let an entrance animation leave a chart showing axes with no series on first paint; data-bearing chart elements render with isAnimationActive={false}.",
+      "Don't introduce hard-offset/neobrutalist shadows, glyph icon fonts, or system display faces; every shadow in this system is soft and diffuse (Elevation vocabulary above), every icon is inline stroke-SVG, and every face is Inter or JetBrains Mono."
+    ]
+  }
+}

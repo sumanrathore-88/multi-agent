@@ -1,0 +1,10 @@
+import { chromium } from "playwright";
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+await page.goto("http://localhost:3000/", { waitUntil: "networkidle" });
+await page.waitForTimeout(900);
+await page.getByText("Region: All Regions").click();
+await page.waitForTimeout(300);
+await page.screenshot({ path: ".impeccable/review/region-dropdown.png" });
+await browser.close();
+console.log("done");
